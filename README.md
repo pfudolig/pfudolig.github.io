@@ -1,2 +1,2 @@
 # pfudolig.github.io
-pfudolig.github.io
+The personal website of Paula Fudolig
