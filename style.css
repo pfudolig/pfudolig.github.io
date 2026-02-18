@@ -1,0 +1,341 @@
+/* ============================= */
+/* Import Fonts */
+/* ============================= */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+
+/* ============================= */
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ============================= */
+/* Base Typography */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.5;
+    font-size: 16px;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Headings */
+h1, h2, h3, .page-title {
+    font-family: 'Lora', serif;
+    color: #111;
+    margin-bottom: 0.1em;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h2 {
+    font-size: 26px;
+}
+
+/* Paragraphs */
+p {
+    margin-bottom: 16px;
+    color: #333;
+}
+
+/* Links */
+a {
+    color: #be1e8d;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #92176b;
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* Header */
+.site-header {
+    width: 100%;
+    padding: 20px 40px;
+    border-bottom: 1px solid #ddd;
+    background: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Site name alignment for subpages */
+body:not(.homepage) .header-inner {
+    justify-content: flex-start;
+}
+
+.site-name {
+    font-size: 18px;
+    color: #111;
+    margin-right: 20px; /* spacing between name and nav */
+}
+
+.site-name strong {
+    font-weight: 700;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    gap: 20px;
+    font-size: 15px;
+}
+
+nav a {
+    color: #444;
+    font-weight: 400;
+}
+
+nav a.active {
+    color: #be1e8d;
+    font-weight: 600;
+}
+
+/* ============================= */
+/* Dropdown (Research) */
+nav .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+nav .dropdown-toggle {
+  cursor: pointer;
+  color: #444;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+nav .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  min-width: 140px;
+  z-index: 200;
+  border-radius: 4px;
+}
+
+nav .dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  color: #333;
+  font-weight: 400;
+}
+
+nav .dropdown-menu a:hover,
+nav .dropdown-menu a:focus {
+  background-color: #f4e4f7;
+  color: #6b21a8;
+}
+
+nav .dropdown:hover .dropdown-menu,
+nav .dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+nav .dropdown:hover > .dropdown-toggle,
+nav .dropdown:focus-within > .dropdown-toggle {
+  color: #be1e8d;
+  font-weight: 600;
+}
+
+/* ============================= */
+/* Layout Container */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* ============================= */
+/* Hero Section */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+.hero img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.hero h1 span {
+    font-weight: 400;
+    color: #111;
+}
+
+.subtitle {
+    margin-bottom: 16px;
+    color: #111;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* ============================= */
+/* Page Title (Subpages) */
+.page-title {
+    margin-bottom: 20px;
+}
+
+/* ============================= */
+/* News Section */
+.news {
+    margin-top: 40px;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 120px 1fr;
+    margin-bottom: 18px;
+    font-size: 15px;
+}
+
+.news-date {
+    font-weight: 700;
+}
+
+/* ============================= */
+/* CV Section */
+.cv-section {
+    margin: 40px auto 20px;
+    max-width: 1000px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.cv-section h2 {
+    font-size: 26px;
+    margin-bottom: 16px;
+}
+
+.cv-download-btn {
+    display: inline-block;
+    background-color: #be1e8d;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+    box-shadow: 0 3px 8px rgba(190, 30, 141, 0.4);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cv-download-btn:hover,
+.cv-download-btn:focus {
+    background-color: #92176b;
+    box-shadow: 0 5px 12px rgba(146, 23, 107, 0.6);
+}
+
+/* ============================= */
+/* Social Section */
+.social {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    font-size: 24px;
+}
+
+.social a {
+    color: #222;
+}
+
+.social a:hover {
+    color: #be1e8d;
+}
+
+/* ============================= */
+/* Footer */
+footer {
+    background: #111;
+    color: #bbb;
+    text-align: center;
+    padding: 8px;
+    font-size: 12px;
+    margin-top: auto;
+}
+
+/* ============================= */
+/* Responsive */
+@media (max-width: 800px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .container {
+        margin: 30px auto;
+    }
+}
+
+
+/* Header layout */
+.header-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; /* keep nav on right */
+    align-items: center;
+}
+
+/* Align site name with container on subpages */
+body:not(.homepage) .site-name {
+    margin-left: 0; /* no extra margin */
+    font-size: 18px;
+    color: #111; /* ensure black for both names */
+}
+
+/* Split first and last name */
+.site-name .first-name {
+    font-weight: 700; /* bold */
+}
+
+.site-name .last-name {
+    font-weight: 400; /* normal */
+}
+
+/* Optional: small spacing between site name and nav on all pages */
+nav {
+    margin-left: auto; /* push nav to the right */
+}
